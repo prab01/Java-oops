@@ -1,0 +1,73 @@
+class Product
+{
+  private String itemno;
+  private String name;
+  private double price;
+  private int quantity;
+  public Product (String itemno)
+  {
+    this.itemno = itemno;
+  }
+  public Product (String itemno, String name)
+  {
+    this.itemno = itemno;
+    this.name = name;
+  }
+  public Product (String itemno, String name, double price, int quantity)
+  {
+    this.itemno = itemno;
+    this.name = name;
+    setPrice (price);
+    setQuantity (quantity);
+  }
+
+  public String getitemno ()
+  {
+    return itemno;
+  }
+  public String getname ()
+  {
+    return name;
+  }
+  public double getprice ()
+  {
+    return price;
+  }
+  public int getquantity ()
+  {
+    return quantity;
+  }
+  public void setPrice (double p)
+  {
+    if (p >= 0)
+      {
+	price = p;
+      }
+    else
+      {
+	price = 0;
+      }
+  }
+  public void setQuantity (int q)
+  {
+    if (q >= 0)
+      {
+	quantity = q;
+      }
+    else
+      {
+	quantity = 0;
+      }
+  }
+
+}
+
+class Main
+{
+  public static void main (String[]args)
+  {
+        Product p1=new Product("123CAR","ALTO",500000,1);
+        System.out.println(p1.getname());
+        
+  }
+}
