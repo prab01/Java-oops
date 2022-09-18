@@ -1,0 +1,33 @@
+class TV
+{
+    void switchOn()
+    {
+        System.out.println("switch on ");
+    }
+    void changeChannel()
+    {
+        System.out.println("change the channel");
+    }
+}
+class SmartTv extends TV{
+    void switchOn()
+    {
+        System.out.println("Switch on SmartTv");
+    }
+    void changeChannel()
+    {
+        System.out.println("Change the channel of SmartTv");
+    }
+    void browse()
+    {
+        System.out.println("Start browsing the channel");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    SmartTv s=new SmartTv();
+	    s.switchOn();
+	    s.browse();
+	}
+}
