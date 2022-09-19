@@ -1,0 +1,31 @@
+abstract class Parent
+{
+    Parent()
+    {
+        System.out.println("Parent class constructor is called");
+    }
+    void method1(){
+        System.out.println("Method1 is called");
+    }
+    abstract void method2();
+}
+class Base extends Parent
+{
+    Base()
+    {
+        System.out.println("Base class constructor is called");
+    }
+    void method2()
+    {
+        System.out.println("Mehod2 of base class is called");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	     Parent s=new Base();
+	     s.method1();
+	     s.method2();
+	     
+	}
+}
