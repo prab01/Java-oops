@@ -1,0 +1,49 @@
+class phone
+{
+    public void message()
+    {
+        System.out.println("message from phone class");
+    }
+    public void call()
+    {
+        System.out.println("Call from phone class");
+    }
+}
+interface camera
+{
+    public void click();
+    public void record();
+}
+interface musicplayer
+{
+    public void start();
+    public void pause();
+   
+}
+class smartphone extends phone implements camera,musicplayer
+{
+    public void click()
+    {
+        System.out.println("smartphone click photo");
+    }
+    public void record()
+    {
+        System.out.println("smartphone record");
+    }
+    public void start()
+    {
+        System.out.println("smartphone start music player");
+    }
+    public void pause()
+    {
+        System.out.println("smartphone pause video");
+    }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    phone t=new smartphone();
+	    t.message();
+	}
+}
