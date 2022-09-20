@@ -1,0 +1,29 @@
+// Interface is used to achieve Run Time polymorphism and dynamic method dispatch.
+interface Test
+{
+    void meth1();
+    void meth2();
+}
+class Test2 implements Test
+{
+    public void meth1()
+    {
+        System.out.println("meth1 of Test2 is called");
+    }
+    public void meth2()
+    {
+        System.out.println("meth2 of Test2 is called");
+    }
+    public void meth3()
+    {
+        System.out.println("meth3 of Test2 is called");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Test t=new Test2();
+		t.meth1();
+		t.meth2();
+	}
+}
